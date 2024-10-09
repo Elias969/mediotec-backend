@@ -5,7 +5,7 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>3.3.4</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <relativePath/> 
     </parent>
     <groupId>com.seuprojeto</groupId>
     <artifactId>alunos</artifactId>
@@ -27,7 +27,7 @@
     </scm>
     <properties>
         <java.version>23</java.version>
-        <mysql.version>8.0.33</mysql.version> <!-- Adicione esta linha -->
+        <mysql.version>8.0.33</mysql.version> 
     </properties>
     <dependencies>
         <dependency>
@@ -41,7 +41,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>${mysql.version}</version> <!-- Use a variável aqui -->
+            <version>${mysql.version}</version> 
             <scope>runtime</scope>
         </dependency>
         <dependency>
