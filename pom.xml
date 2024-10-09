@@ -28,6 +28,7 @@
     <properties>
         <java.version>17</java.version>
         <mysql.version>8.0.33</mysql.version> 
+        <postgresql.version>42.6.0</postgresql.version> <!-- Adicione esta linha -->
     </properties>
     <dependencies>
         <dependency>
@@ -43,6 +44,11 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>${mysql.version}</version> 
             <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.postgresql</groupId> <!-- Adicione esta dependência -->
+            <artifactId>postgresql</artifactId>
+            <version>42.7.3</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
