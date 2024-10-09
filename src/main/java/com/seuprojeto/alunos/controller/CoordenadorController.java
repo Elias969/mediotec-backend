@@ -11,7 +11,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/coordenadores")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "https://mediotec.netlify.app")
 public class CoordenadorController {
 
     @Autowired
