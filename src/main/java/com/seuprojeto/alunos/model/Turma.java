@@ -1,7 +1,7 @@
 package com.seuprojeto.alunos.model;
 
 import jakarta.persistence.*;
-import java.util.List;
+
 
 @Entity
 public class Turma {
@@ -14,8 +14,7 @@ public class Turma {
     private String nomeProfessor; // Novo campo adicionado
     private Integer numeroDeAlunos; // Novo campo adicionado
 
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private List<Aluno> alunos;
+   
 
     // Getters e Setters
     public Long getId() {
@@ -50,20 +49,13 @@ public class Turma {
         this.nomeProfessor = nomeProfessor;
     }
 
-    public Integer getNumeroDeAlunos() {
+    public Integer getnumeroDealunos() {
         return numeroDeAlunos;
     }
 
-    public void setNumeroDeAlunos(Integer numeroDeAlunos) {
-        this.numeroDeAlunos = numeroDeAlunos;
+    public void setumeroDealunos(Integer numeroDealunos) {
+        this.numeroDeAlunos = numeroDealunos;
     }
 
 
-    public List<Aluno> getAlunos() {
-        return alunos;
-    }
-
-    public void setAlunos(List<Aluno> alunos) {
-        this.alunos = alunos;
-    }
 }
