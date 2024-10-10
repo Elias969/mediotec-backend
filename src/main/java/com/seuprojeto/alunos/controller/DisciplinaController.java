@@ -34,4 +34,31 @@ public class DisciplinaController {
         Disciplina novaDisciplina = disciplinaService.salvarDisciplina(disciplina);
         return ResponseEntity.ok(novaDisciplina);
     }
+
+    // Atualizar Disciplina
+    @PutMapping("/{id}")
+    public ResponseEntity<Disciplina> atualizarDisciplina(@PathVariable Long id, @RequestBody Disciplina disciplinaAtualizada) {
+        Optional<Disciplina> disciplinaExistente = disciplinaService.buscarDisciplinaPorId(id);
+        if (disciplinaExistente.isPresent()) {
+            Disciplina disciplina = disciplinaExistente.get();
+            disciplina.setNome(disciplinaAtualizada.getNome());  // Exemplo de atualização
+            // Adicione mais campos conforme necessário
+            Disciplina disciplinaSalva = disciplinaService.salvarDisciplina(disciplina);
+            return ResponseEntity.ok(disciplinaSalva);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
+    // Deletar Disciplina
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deletarDisciplina(@PathVariable Long id) {
+        Optional<Disciplina> disciplinaExistente = disciplinaService.buscarDisciplinaPorId(id);
+        if (disciplinaExistente.isPresent()) {
+            disciplinaService.deletarDisciplina(id);
+            return ResponseEntity.noContent().build();  // Retorna status 204 No Content
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
 }
