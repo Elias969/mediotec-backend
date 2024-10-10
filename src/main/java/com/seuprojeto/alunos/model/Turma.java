@@ -11,6 +11,8 @@ public class Turma {
 
     private String nome;
     private String periodo;
+    private String nomeProfessor; // Novo campo adicionado
+    private int numeroDeAlunos; // Novo campo adicionado
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Aluno> alunos;
@@ -38,6 +40,22 @@ public class Turma {
 
     public void setPeriodo(String periodo) {
         this.periodo = periodo;
+    }
+
+    public String getNomeProfessor() {
+        return nomeProfessor;
+    }
+
+    public void setNomeProfessor(String nomeProfessor) {
+        this.nomeProfessor = nomeProfessor;
+    }
+
+    public int getNumeroDeAlunos() {
+        return numeroDeAlunos;
+    }
+
+    public void setNumeroDeAlunos(int numeroDeAlunos) {
+        this.numeroDeAlunos = numeroDeAlunos;
     }
 
     public List<Aluno> getAlunos() {
