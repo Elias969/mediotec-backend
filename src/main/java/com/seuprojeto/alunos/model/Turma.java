@@ -12,7 +12,7 @@ public class Turma {
     private String nome;
     private String periodo;
     private String nomeProfessor; // Novo campo adicionado
-    private Integer numeroDeAlunos; // Novo campo adicionado
+    private Integer numerodealunos; // Novo campo adicionado
 
    
 
@@ -49,12 +49,12 @@ public class Turma {
         this.nomeProfessor = nomeProfessor;
     }
 
-    public Integer getnumeroDealunos() {
-        return numeroDeAlunos;
+    public Integer getnumerodealunos() {
+        return numerodealunos;
     }
 
-    public void setumeroDealunos(Integer numeroDealunos) {
-        this.numeroDeAlunos = numeroDealunos;
+    public void setumeroDealunos(Integer numerodealunos) {
+        this.numerodealunos = numerodealunos;
     }
 
 
